@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+body {
+    background-color: #fff;
+    width: calc(98%);
+    height: calc(97%);
+    border-radius: calc(30px);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    padding: calc(2rem + 1vh);
+}
+
+.container {
+    margin-top: calc(5rem + 2vh);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.popup-overlay.hidden {
+    opacity: 0;
+    pointer-events: none; 
+}
+
+.popup-content {
+    background: linear-gradient(145deg, #ffffff, #ffffff);
+    color: black;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transform: scale(1);
+    transition: transform 0.3s ease;
+}
+
+.popup-overlay .popup-content:hover {
+    transform: scale(1.02);
+}
+
+.popup-content h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.popup-content button {
+    background: #ffacbc;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 0 10px;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.popup-content button:hover {
+    background: #ffffff;
+    color: #ffacbc;
+}
+
+.welcome-text {
+    font-size: clamp(1rem, 1.5vw, 2rem);
+    color: #333;
+    font-weight: normal;
+    margin-bottom: calc(1vh + 0.5rem); 
+    text-align: center;
+    z-index: 1;
+}
+
+.main-title {
+    font-size: clamp(2rem, 4vw, 5rem); 
+    color: #ffacbc;
+    font-weight: bold;
+    margin: calc(1vh + 1rem) 0;
+    text-align: center;
+    z-index: 1;
+}
+
+.solid-o {
+    background-color: #ffacbc; 
+    color: transparent; 
+    width: 1.1em; 
+    height: 1.1em;
+    line-height: 1em;
+    border-radius: 50%;
+    display: inline-block; 
+    position: relative; 
+    vertical-align: middle; 
+    font-size: inherit; 
+}
+
+.solid-o.o1,
+.solid-o.o2,
+.solid-o.o3 {
+    width: 0.75em;
+    height: 0.80em;
+    top: -0.1em;
+    left: 0;
+}
+
+.cursor {
+    font-weight: bold;
+    color: transparent;
+    font-size: inherit;
+    margin-left: 0.5vw;
+    animation: blink 0.5s steps(1) infinite;
+    display: inline-block;
+    width: 0.05em;
+    background-color: #ffacbc;
+    z-index: 1;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+.record-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.5rem;
+}
+
+.song-info {
+    font-size: clamp(0.6rem, 1.2vw, 0.7rem); 
+    color: #333;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+.song-info .author {
+    font-size: clamp(0.6rem, 2vw, 0.5rem);
+    color: #555;
+    font-style: italic;
+}
+
+.record-selection {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    gap: clamp(2rem, 4vw, 3rem); 
+    margin: clamp(1rem, 3vh, 3rem) 0;
+    z-index: 1;
+}
+
+.record-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center; 
+    min-width: 120px; 
+}
+
+.record-selection img {
+    width: clamp(50px, 5vw, 120px);
+    height: clamp(50px, 5vw, 120px);
+    border-radius: 50%;
+    transition: transform 0.2s ease-in-out;
+    filter: saturate(0);
+}
+
+.record-text {
+    margin-top: 0.5rem; 
+    font-size: clamp(0.8rem, 1.2vw, 1rem);
+    color: #333;
+}
+
+
+.logo {
+    margin-top: calc(1rem + 2vh);
+}
+
+.logo img {
+    width: clamp(40px, 6vw, 100px);
+}

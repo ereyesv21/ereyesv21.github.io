@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="../CSS/Bstyles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="icon" href="../IMG/logoFNO.png" type="image/png">
+</head>
+<body>
+<section class="contact">
+    <div class="contact-container">
+        
+        <div class="texto-1">
+            <a href="">
+                <img src="../IMG/slogo.png" alt="Logo 1" />
+            </a>
+        </div>
+       
+        <div class="contact-count">
+            <div class="contact-1">
+                <a href="https://vimeo.com/fromnowonit" target="_blank">
+                    <img src="../IMG/vimeo.png" alt="Logo 1" />
+                </a>
+            </div>
+            <div class="contact-2">
+                <a href="https://www.linkedin.com/company/from-now-on-filmproduction/" target="_blank">
+                    <img src="../IMG/negro.png" alt="Logo 2" />
+                </a>
+            </div>
+            <div class="contact-3">
+                <a href="mailto:info@fromnowon.it" target="_blank">
+                    <img src="../IMG/correo.png" alt="Logo 3" />
+                </a>
+            </div>
+            <div class="contact-4">
+                <a href="https://www.instagram.com/fromnowon.official/" target="_blank">
+                    <img src="../IMG/instagram.png" alt="Logo 4" />
+                </a>
+            </div>
+        </div>
+        
+        <div class="texto2">
+            <h2>info@fromnowon.it</h2>
+        </div>
+    </div>
+
+    <aside class="sidebar">
+        <a href="../HTML/home.html">HOME</a>
+        <a href="../HTML/about.html">ABOUT</a>
+        <a href="../HTML/contact.html" class="active">CONTACT</a>
+        <a href="../HTML/behindthescenes.html">BEHIND THE SCENES</a>
+    </aside>
+    
+    
+    <script src="../JS/audioManager.js"></script>
+
+    <button class="boton" onclick="mostrarMensaje()">PRIVACY TERMS</button>
+
+    <div id="mensaje" class="mensaje-emergente">
+
+        <span class="cerrar" onclick="cerrarMensaje()">X</span>
+        Imprint
+    Close
+    Legal notice
+    Owner
+    Philipp Silbernagl
+    
+    Stampflgraben 2
+    39100 Bozen - Italien
+    
+    Mail: philipp@fromnowon.it
+    Phone: +393898848902
+    PEC: philippsilbernagl@pec.it
+    Mwst. Nr.: 03210820217
+    
+    Legal body responsible for the contents
+    Philipp Silbernagl
+    
+    Concept, Design, Programming & Implementation
+    puedes poner la Universidad
+    
+    Notice of liability
+    Despite careful quality control, we take no responsibility for the contents of external links. The sole responsibility for the content of external links websites lies exclusively by the author of the linked website.
+    
+    Mandatory information Mandatory information according to the EU-Regulation N. 524/2013 of the European Parliament and of the Council Platform for online dispute resolution for consumer disputes (ODR) to the European Commission: https://ec.europa.eu/consumers/odr/
+    </div>
+    
+    <script>
+  
+        function mostrarMensaje() {
+            var mensaje = document.getElementById("mensaje");
+            mensaje.style.display = "block"; 
+        }
+    
+     
+        function cerrarMensaje() {
+            var mensaje = document.getElementById("mensaje");
+            mensaje.style.display = "none"; 
+        }
+    </script>
+</body>
+</html>
